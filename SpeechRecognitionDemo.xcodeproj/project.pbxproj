@@ -12,6 +12,7 @@
 		C2B6B72622972CFE00A56EA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B6B72422972CFE00A56EA4 /* Main.storyboard */; };
 		C2B6B72822972D0000A56EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2B6B72722972D0000A56EA4 /* Assets.xcassets */; };
 		C2B6B72B22972D0000A56EA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B6B72922972D0000A56EA4 /* LaunchScreen.storyboard */; };
+		C2B6B73322972D1700A56EA4 /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B6B73222972D1700A56EA4 /* SpeechRecognition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C2B6B72722972D0000A56EA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2B6B72A22972D0000A56EA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2B6B72C22972D0000A56EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2B6B73222972D1700A56EA4 /* SpeechRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				C2B6B72022972CFE00A56EA4 /* AppDelegate.swift */,
 				C2B6B72222972CFE00A56EA4 /* ViewController.swift */,
+				C2B6B73222972D1700A56EA4 /* SpeechRecognition.swift */,
 				C2B6B72422972CFE00A56EA4 /* Main.storyboard */,
 				C2B6B72722972D0000A56EA4 /* Assets.xcassets */,
 				C2B6B72922972D0000A56EA4 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2B6B72322972CFE00A56EA4 /* ViewController.swift in Sources */,
+				C2B6B73322972D1700A56EA4 /* SpeechRecognition.swift in Sources */,
 				C2B6B72122972CFE00A56EA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

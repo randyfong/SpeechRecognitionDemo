@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,51 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeechRecognitionDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmy-NO-ubh">
+                                <rect key="frame" x="80.5" y="318" width="253" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Press to Speak"/>
+                                <connections>
+                                    <action selector="startSpeakingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nW5-jc-afP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kB-ia-7K7" userLabel="RecognizedPhrase">
+                                <rect key="frame" x="207" y="430" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Recognized Phrase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0f-pW-ben">
+                                <rect key="frame" x="103.5" y="448" width="207" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6kB-ia-7K7" firstAttribute="top" secondItem="Qmy-NO-ubh" secondAttribute="bottom" constant="52" id="55V-5L-uio"/>
+                            <constraint firstItem="g0f-pW-ben" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Egv-ha-rA1"/>
+                            <constraint firstItem="Qmy-NO-ubh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M1V-ne-1F4"/>
+                            <constraint firstItem="g0f-pW-ben" firstAttribute="top" secondItem="6kB-ia-7K7" secondAttribute="bottom" constant="18" id="NL3-9R-EzL"/>
+                            <constraint firstItem="6kB-ia-7K7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mSi-a0-ZaR"/>
+                            <constraint firstItem="Qmy-NO-ubh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="tal-ap-zod"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lastRecognizedPhraseLabel" destination="g0f-pW-ben" id="qyb-JT-czW"/>
+                        <outlet property="recognizedPhrase" destination="6kB-ia-7K7" id="ADm-HS-QF1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="52.901785714285715"/>
         </scene>
     </scenes>
 </document>
